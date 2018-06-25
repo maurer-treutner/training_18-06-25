@@ -1,0 +1,48 @@
+
+# ignore ext build and prefix directory 
+ext/build/*
+ext/prefix/*
+
+# ignore dev build, prefix and package directory
+dev/build/*
+dev/prefix/*
+dev/package/*
+dev/ws/*
+.vscode/*
+
+# ignore temporary files
+*.swp
+*.odt#
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
