@@ -19,7 +19,7 @@ PREFIX_DIR_HOST_DEBUG := $(PREFIX_DIR_ROOT)/host_debug
 #
 # Define GENERATOR for CMake
 #
-GENERATOR := "Unix Makefiles"
+GENERATOR := "Eclipse CDT4 - Unix Makefiles"
 
 
 #
@@ -63,12 +63,12 @@ all: host host_debug
 
 host: 
 	$(Q)mkdir -p $(BUILD_DIR_HOST)
-	$(Q)cd ${BUILD_DIR_HOST} && cmake ${COMMON_CMAKE_FLAGS} ${HOST_CMAKE_FLAGS_RELEASE} ${SOURCE_DIR}
+	$(Q)cd ${BUILD_DIR_HOST} && cmake3 ${COMMON_CMAKE_FLAGS} ${HOST_CMAKE_FLAGS_RELEASE} ${SOURCE_DIR}
 	$(Q)make -C ${BUILD_DIR_HOST} VERBOSE=${VERBOSE}
 
 host_debug: 
 	$(Q)mkdir -p $(BUILD_DIR_HOST_DEBUG)
-	$(Q)cd ${BUILD_DIR_HOST_DEBUG} && cmake ${COMMON_CMAKE_FLAGS} ${HOST_CMAKE_FLAGS_DEBUG} ${SOURCE_DIR}
+	$(Q)cd ${BUILD_DIR_HOST_DEBUG} && cmake3 ${COMMON_CMAKE_FLAGS} ${HOST_CMAKE_FLAGS_DEBUG} ${SOURCE_DIR}
 	$(Q)make -C ${BUILD_DIR_HOST_DEBUG} VERBOSE=${VERBOSE}
 
 clean:
