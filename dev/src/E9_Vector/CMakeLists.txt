@@ -9,4 +9,8 @@ target_compile_features(${TARGETNAME}
     cxx_std_14  
 )
 
+target_link_libraries(${TARGETNAME}
+    pthread
+)
+
 install_targets(/exe ${TARGETNAME})

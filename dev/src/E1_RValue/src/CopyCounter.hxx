@@ -34,14 +34,15 @@ public:
     const CopyCounter& operator = (const CopyCounter& rhs)
     {
         ++_copyOpCounter;
-        return *this;
         _i = rhs._i;
+        return *this;
     }
 
     const CopyCounter& operator = (CopyCounter&& rhs)
     {
         ++_moveOpCounter;
         std::swap(_i,rhs._i);
+        return *this;
     }
 
     static void clearCounters()
