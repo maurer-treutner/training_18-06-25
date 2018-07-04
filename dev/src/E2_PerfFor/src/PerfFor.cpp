@@ -4,23 +4,24 @@
 #include "CopyCounter.hxx"
 
 template <typename T>
-class TestHolder
+void perfForward(T &&arg)
 {
-public:
-    template <typename Arg>
-    TestHolder(Arg arg):
-        _hold(std::make_shared<T>(arg))
-    {}
+    moving(std::forward<T>(arg));
+}
 
-private:
-    std::shared_ptr<T> _hold;
-};
-
+template <typename T>
+void moving(T &&arg)
+{
+    T local = std::forward<T>(arg);
+    local.doSmt();
+}
 
 int main(int argc,char *argv[])
 {
-    int num=7;
-    auto myHolder = TestHolder<int>(num);
-    auto mySuperHolder = TestHolder<int>(42);
-
+    CopyCounter cnt1;
+    CopyCounter::printCounters("After Creation");
+    perfForward(cnt1);
+    CopyCounter::printCounters("Forwarded L-Value");
+    perfForward(std::move(cnt1));
+    CopyCounter::printCounters("Forwarded R-Value");
 }
