@@ -16,16 +16,14 @@ CopyCounter getCC1()
 CopyCounter getIndCC1()
 {
     CopyCounter c;
-    c=getCC2();
+    c = getCC2();
     return c;
 }
 
-
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
-    CopyCounter c1=getCC1();
+    CopyCounter c1 = getCC1();
     CopyCounter::printCounters("After two returns");
-    CopyCounter c2=getIndCC1();
+    CopyCounter c2 = getIndCC1();
     CopyCounter::printCounters("After indirect return");
-
 }

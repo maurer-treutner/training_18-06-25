@@ -16,7 +16,7 @@ void moving(T &&arg)
     local.doSmt();
 }
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
     CopyCounter cnt1;
     CopyCounter::printCounters("After Creation");

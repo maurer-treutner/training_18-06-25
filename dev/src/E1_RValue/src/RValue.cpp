@@ -13,7 +13,7 @@ void moving(CopyCounter &&c)
     CopyCounter localCounter = std::move(c);
 }
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
     CopyCounter c1;
     CopyCounter::printCounters("After Creation");

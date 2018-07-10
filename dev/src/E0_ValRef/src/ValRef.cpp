@@ -4,16 +4,16 @@
 #include "CopyCounter.hxx"
 
 void demoByValue(CopyCounter cnt)
-{   
+{
     CopyCounter::printCounters("demoByValue");
 }
 
-void demoByReference(const CopyCounter& cnt)
+void demoByReference(const CopyCounter &cnt)
 {
     CopyCounter::printCounters("demoByReference");
 }
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
     CopyCounter myCounter;
     CopyCounter::printCounters("After Construction");
