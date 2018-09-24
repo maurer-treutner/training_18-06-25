@@ -1,7 +1,7 @@
-set(TARGETNAME "Atomic")
+set(TARGETNAME "SpinLock")
 
 add_executable(${TARGETNAME}
-    src/Atomic.cpp
+    src/${TARGETNAME}.cpp
 )
 
 target_compile_features(${TARGETNAME}

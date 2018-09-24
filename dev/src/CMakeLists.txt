@@ -32,4 +32,5 @@ add_subdirectory(E13_Promise)
 add_subdirectory(E14_ThreadTask)
 add_subdirectory(E15_Atomic)
 add_subdirectory(E16_StreamOp)
+add_subdirectory(E17_SpinLock)
 
